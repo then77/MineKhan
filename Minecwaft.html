@@ -4128,18 +4128,18 @@ function MineKhan() {
 		let dt = (win.performance.now() - p.lastUpdate) / 33
 		dt = dt > 2 ? 2 : dt
 
-		if(Key.w) move.z += p.speed
-		if(Key.s) move.z -= p.speed
-		if(Key.a) move.x += p.speed
-		if(Key.d) move.x -= p.speed
+		if(Key.w) p.rx += 0.1 * dt
+		if(Key.s) p.rx -= 0.1 * dt
+		if(Key.a) p.ry -= 0.1 * dt
+		if(Key.d) p.ry += 0.1 * dt
 		if (p.flying) {
 			if(Key[" "]) p.velocity.y += 0.06 * dt
 			if(Key.shift) p.velocity.y -= 0.06 * dt
 		}
-		if(Key.arrowleft) p.ry -= 0.1 * dt
-		if(Key.arrowright) p.ry += 0.1 * dt
-		if(Key.arrowup) p.rx += 0.1 * dt
-		if(Key.arrowdown) p.rx -= 0.1 * dt
+		if(Key.arrowleft) move.x += p.speed
+		if(Key.arrowright) move.x -= p.speed
+		if(Key.arrowup) move.z += p.speed
+		if(Key.arrowdown) move.z -= p.speed
 
 		if (!p.sprinting && Key.q && !p.sneaking && Key.w) {
 			p.FOV(settings.fov + 10, 250)
