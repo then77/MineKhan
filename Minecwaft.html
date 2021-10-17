@@ -81,9 +81,9 @@ This isn't entirely necessary, but it's considered best practice. Some OpenGL ES
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>MineKhan</title>
+		<title>Minecwaft</title>
 		<link id="vtfont" href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-		<link rel="shortcut icon" type="image/ico" href="https://willard21.github.io/MineKhan/favicon.ico">
+		<link rel="shortcut icon" type="image/ico" href="https://then77.github.io/MineKhan/favicon.ico">
 	</head>
 	<style>
 		body {
@@ -460,9 +460,10 @@ function MineKhan() {
 		{
 			name: "grass",
 			textures: [ "dirt", "grassTop", "grassSide" ],
+                        shadow: true,
 		},
-		{ name: "dirt" },
-		{ name: "stone" },
+		{ name: "dirt", shadow: true, },
+		{ name: "stone", shadow: true, },
 		{ name: "bedrock" },
 		{ name: "sand" },
 		{ name: "gravel" },
